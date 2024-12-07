@@ -1,0 +1,7 @@
+logo_image = "xpath://*[contaions(@img,'https://ultimateqa.com/wp-content/uploads/2023/11/logo.svg')]"
+education_menu = "xpath://*[contains(@class,'sub-menu')]"
+menu_items = "id:menu-main-menu"
+courses_collections = "https://courses.ultimateqa.com/collections"
+courses_link_locator = "xpath://*[@class='active' and @id='category-name']"
+sign_in_link = "https://courses.ultimateqa.com/users/sign_in"
+heading_sign_in_page = "xpath://*[@class='page__heading']"
