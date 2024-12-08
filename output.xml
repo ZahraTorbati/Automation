@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20241208 20:57:52.661" rpa="false" schemaversion="3">
+<suite id="s1" name="Automation" source="/Users/zahratorbati/Desktop/Homework/Automation">
+<suite id="s1-s1" name="HW1" source="/Users/zahratorbati/Desktop/Homework/Automation/HW1.robot">
+<test id="s1-s1-t1" name="show free courses" line="9">
+<kw name="Open browser in ultimateqa" type="SETUP">
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${executable_path}</var>
+<arg>/Users/zahratorbati/Desktop/Homework/Automation/drivers/chromedriver</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20241208 20:57:52.786" level="INFO">${executable_path} = /Users/zahratorbati/Desktop/Homework/Automation/drivers/chromedriver</msg>
+<status status="PASS" starttime="20241208 20:57:52.786" endtime="20241208 20:57:52.786"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://courses.ultimateqa.com</arg>
+<arg>browser=chrome</arg>
+<arg>service=executable_path='${executable_path}'</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241208 20:57:52.786" level="INFO">Opening browser 'chrome' to base url 'https://courses.ultimateqa.com'.</msg>
+<msg timestamp="20241208 20:58:11.007" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20241208 20:58:11.008" level="FAIL">WebDriverException: Message: Service /Users/zahratorbati/Desktop/Homework/Automation/drivers/chromedriver unexpectedly exited. Status code was: -9
+</msg>
+<status status="FAIL" starttime="20241208 20:57:52.786" endtime="20241208 20:58:11.015"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20241208 20:58:11.016" endtime="20241208 20:58:11.016"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${logo_image}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20241208 20:58:11.016" endtime="20241208 20:58:11.016"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${menu_items}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20241208 20:58:11.016" endtime="20241208 20:58:11.016"/>
+</kw>
+<status status="FAIL" starttime="20241208 20:57:52.786" endtime="20241208 20:58:11.017"/>
+</kw>
+<status status="FAIL" starttime="20241208 20:57:52.785" endtime="20241208 20:58:11.017">Setup failed:
+WebDriverException: Message: Service /Users/zahratorbati/Desktop/Homework/Automation/drivers/chromedriver unexpectedly exited. Status code was: -9
+</status>
+</test>
+<status status="FAIL" starttime="20241208 20:57:52.672" endtime="20241208 20:58:11.018"/>
+</suite>
+<status status="FAIL" starttime="20241208 20:57:52.662" endtime="20241208 20:58:11.019"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Automation">Automation</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="HW1">Automation.HW1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
