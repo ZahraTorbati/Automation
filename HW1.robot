@@ -15,10 +15,11 @@ sign in ultimateqa
     Tap on sign in
 
 *** Keywords ***
+
 Open browser in ultimateqa
-    ${executable_path}                         Normalize Path                            ${curdir}/drivers/chromedriver
+    ${executable_path}                         Normalize Path                            ${CURDIR}/drivers/chromedriver
     Open Browser                               url=https://courses.ultimateqa.com        browser=chrome
-    ...                                        service=executable_path='${}'
+    ...                                        service=executable_path='${executable_path}'
     Maximize Browser Window
     Wait Until Page Contains Element           ${logo_image}
     Wait Until Page Contains Element           ${menu_items}
