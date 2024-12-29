@@ -6,35 +6,44 @@ Test Setup     Open browser in ultimateqa
 
 
 *** Test Cases ***
+
 show free courses
     Go ON Education Tab
-    select free courses
+    Select Free Courses And Go To Sign In Page
 
-sign in ultimateqa
+
+Go sign in ultimateqa page
     Go ON Education Tab
-    Tap on sign in
+    Select Free Courses And Go To Sign In Page
+    Tap On Sign In
+
 
 *** Keywords ***
-
 Open browser in ultimateqa
-    ${executable_path}                         Normalize Path                            ${CURDIR}/drivers/chromedriver
-    Open Browser                               url=https://courses.ultimateqa.com        browser=chrome
-    ...                                        service=executable_path='${executable_path}'
+    Open Browser                               url=https://ultimateqa.com/automation#        browser=chrome
     Maximize Browser Window
-    Wait Until Page Contains Element           ${logo_image}
-    Wait Until Page Contains Element           ${menu_items}
+
 
 Go ON education tab
-    Wait Until Page Contains Element           ${education_menu}
+    Wait Until Element Is Visible              ${education_menu}                             timeout=5s
+    Mouse Over                                 ${education_menu}
+    Wait Until Element Is Visible              ${free_courses}                               timeout=5s
 
-select free courses
-    Location Should Be                         ${courses_collections}
-    Wait Until Page Contains Element           ${courses_link_locator}
+
+select free courses and go to sign in page
+    Click Element                              ${free_courses}
+    Wait Until Location Is                     ${courses_collection}
 
 tap on sign in
-    Click Link                                 ${sign_in_link}
-    Location Should Contain                    ${sign_in_link}
-    Wait Until Page Contains Element           ${heading_sign_in_page}
+
+    Mouse Over                                 ${sign_in}
+    Click Element                              ${sign_in}
+    Wait Until Location Is                     ${sign_in_link}
+
+select the search button
+    Open Browser                               url=https://courses.ultimateqa.com/collections     timeout=5s
+    Wait Until Element Is Visible              ${product_title}
+    Click Element                              ${search_input}
 
     
 
